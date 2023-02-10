@@ -1,4 +1,4 @@
-const { Thought, User, Reaction } = require('../models');
+const { Thought } = require('../models');
 // /api/thoughts
 // --------------------------------------------------------
 module.exports = {

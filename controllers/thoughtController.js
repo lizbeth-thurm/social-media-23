@@ -9,7 +9,7 @@ module.exports = {
             .catch((err) => res.status(500).json(err));
     },
     // // GET to get a single thought by its _id
-    getSingThought(req, res) {
+    getSingleThought(req, res) {
         Thought.findOne({ _id: req.params.thoughtId })
             .select('-__v')
             .then((thought) =>
@@ -78,7 +78,7 @@ module.exports = {
             .catch((err) => res.status(500).json(err));
     },
     // // DELETE to pull and remove a reaction by the reaction's reactionId value
-    removeReaction(req, res) {
+    deleteReaction(req, res) {
         Thought.findOneAndUpdate(
             { _id: req.params.thoughtId },
             { $pull: { reactions: { reactionId: req.params.reactionId } } },

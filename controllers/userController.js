@@ -88,6 +88,6 @@ module.exports = {
                     : User.deleteOne({ _id: { $in: user.friends } })
             )
             .then(() => res.json({ message: 'Friend deleted!' }))
-
-
+            .catch((err) => res.status(500).json(err));
+    },
 };

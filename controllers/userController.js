@@ -8,7 +8,7 @@ module.exports = {
       .then((users) => res.json(users))
       .catch((err) => res.status(500).json(err));
   },
-  // // GET a signle user by its _id and populated thought and friend data
+  // // GET a single user by its _id and populated thought and friend data
   getSingleUser(req, res) {
     User.findOne({ _id: req.params.userId })
       .populate({

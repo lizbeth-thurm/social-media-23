@@ -6,7 +6,9 @@ module.exports = {
   getThoughts(req, res) {
     console.log("getThoughts");
     Thought.find({})
-      .then((thoughts) => res.json(thoughts))
+      .then((thoughts) => {
+        console.log(thoughts)
+        res.json(thoughts)})
       .catch((err) => res.status(500).json(err));
   },
   // // GET to get a single thought by its _id

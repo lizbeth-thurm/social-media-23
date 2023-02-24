@@ -4,11 +4,11 @@ const { Thought } = require("../models");
 module.exports = {
   // // GET to get all thoughts
   getThoughts(req, res) {
-    console.log("getThoughts");
     Thought.find({})
       .then((thoughts) => {
-        console.log(thoughts)
-        res.json(thoughts)})
+        console.log(thoughts);
+        res.json(thoughts);
+      })
       .catch((err) => res.status(500).json(err));
   },
   // // GET to get a single thought by its _id
@@ -59,7 +59,6 @@ module.exports = {
           ? res.status(404).json({ message: "No thought found with this id!" })
           : res.json(thought)
       )
-      .then(() => res.json({ message: "Thought deleted!" }))
       .catch((err) => res.status(500).json(err));
   },
   // /api/thoughts/:thoughtId/reactions

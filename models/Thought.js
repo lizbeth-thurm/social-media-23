@@ -16,6 +16,8 @@ const ReactionSchema = require("./Reaction");
 // // reactions (These are like replies)
 // // // Array of nested documents created with the reactionSchema
 
+const formatDate = require("../utils/formatDate");
+
 const ThoughtSchema = new Schema(
   {
     thoughtText: {
@@ -28,7 +30,9 @@ const ThoughtSchema = new Schema(
       type: Date,
       default: Date.now,
       // use getter method to format timestamp on query
-      // get: (createdAtVal) => dateFormat(createdAtVal),
+      get: (createdAtVal) => {
+        return formatDate(createdAtVal);
+      }
     },
     username: {
       type: String,

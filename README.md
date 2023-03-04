@@ -8,6 +8,7 @@
 
 - [License](#license)
 - [Resources](#resources)
+- [Links](#links)
 - [Questions](#questions)
 
 ## License
@@ -16,16 +17,16 @@ None
 
 ## Resources
 
-[Demonstration Video]()
+- [Video Demonstration](https://youtu.be/rH9nZ0Q4jCM)
 
-[Github Repository](https://github.com/lizbeth-thurm/social-media-23)
+## Links
+
+- [GitHub Repository](https://github.com/lizbeth-thurm/social-media-23)
 
 ## Questions
 
 GitHub Username:
 
-[lizbeth-thurm](https://github.com/lizbeth-thurm)
+- [lizbeth-thurm](https://github.com/lizbeth-thurm)
 
-You can reach me with any questions at:
-
-[slthurman01@gmail.com](slthurman01@gmail.com)
+- You can reach me with any questions at [my email address](mailto:slthurman01@gmail.com)

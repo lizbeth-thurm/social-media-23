@@ -32,7 +32,7 @@ const ThoughtSchema = new Schema(
       // use getter method to format timestamp on query
       get: (createdAtVal) => {
         return formatDate(createdAtVal);
-      }
+      },
     },
     username: {
       type: String,

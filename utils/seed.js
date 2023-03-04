@@ -16,7 +16,7 @@ connection.once("open", async () => {
   // Add uers to the collection and await the results
   await User.collection.insertMany(users);
 
-  // Add courses to the collection and await the results
+  // Add thoughts to the collection and await the results
   await Thought.collection.insertMany(thoughts);
 
   // Log out the seed data to indicate what should appear in the database

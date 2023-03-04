@@ -70,6 +70,7 @@ module.exports = {
       { $push: { reactions: req.body } },
       { runValidators: true, new: true }
     )
+
       .then((thought) =>
         !thought
           ? res.status(404).json({ message: "No thought found with this id!" })

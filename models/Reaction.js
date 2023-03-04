@@ -1,4 +1,5 @@
 const { Schema, Types } = require("mongoose");
+const formatDate = require("../utils/formatDate");
 
 // Reaction (SCHEMA ONLY)
 // // reactionId
@@ -34,7 +35,7 @@ const ReactionSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      get: (createdAtVal) => dateFormat(createdAtVal),
+      get: (createdAtVal) => formatDate(createdAtVal),
     },
   },
   {

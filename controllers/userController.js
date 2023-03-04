@@ -81,13 +81,16 @@ module.exports = {
   },
   // // DELETE to remove a friend from a user's friend list
   deleteFriend(req, res) {
-    User.findOneAndDelete({ _id: req.params.userId })
+    User.findOneAndUpdate(
+      { _id: req.params.userId },
+      { $pull: { friends: req.params.friendId } },
+      { runValidators: true, new: true }
+    )
       .then((user) =>
         !user
           ? res.status(404).json({ message: "No user found with this id!" })
-          : User.deleteOne({ _id: { $in: user.friends } })
+          : res.json(user)
       )
-      .then(() => res.json({ message: "Friend deleted!" }))
       .catch((err) => res.status(500).json(err));
   },
 };
